@@ -16,7 +16,7 @@ accounts for __51%__ of all crimes
 against children (NCRB 2016)
 
 ## 2. Objective of the Project:
-The objective of this project is to help Central authorities & Police to track down missing children quickly by making use of technology.
+The objective of this project is to help Central authorities & Police to track down missing children quickly with the help of citizens by making use of Technology.
 
 ## 3. Standard Solution being used:
 * Tracking a missing child using Manual investigation requires both time and experience (to ask right questions). 
