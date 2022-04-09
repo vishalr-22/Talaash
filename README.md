@@ -1,2 +1,8 @@
 # Talaash
-Identifying missing people in order to help concerned authorities to find them
+### A facial recognition system for tracking missing children
+
+## Developed by Team Cryptasylum
+- Shrikant Sahu
+- Rishabh Kothari
+- R. Vishal
+- Piyush Sharma
