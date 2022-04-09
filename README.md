@@ -28,6 +28,10 @@ The objective of this project is to help Central authorities & Police track down
 * Here we will have a database of Missing people, and whenever someone try to ping any photo against it, an algorithm hits off thats start matching those photographs with available database using our Face Recognition Mode .
 * It will be an open-source product and free-to-use application that communities can use to help finding people and children in their neighbourhood.
 
+## 5. Tech Stack:
+* [Flutter](https://flutter.dev/) : For Android App on the User Side
+* [Flask](https://flask.palletsprojects.com/en/2.1.x/) : For Web App on the admin side
+* [DeepFace](https://pypi.org/project/deepface/) : For Face Recognition Model.
 
 ## Source of facts : 
 1. https://www.cry.org/wp-content/uploads/2018/08/International-Missing-Children_s-Day-2018.pdf.
