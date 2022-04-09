@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:talaash/screens/report_sighting.dart';
+import 'match_resolver.dart';
 import '../utils/pick_image.dart';
 import 'report_sighting.dart';
 
@@ -119,7 +120,41 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
               ),
               ElevatedButton(
                   onPressed: () async {
-                    print('Upload image');
+                    try {
+                      if (controller != null) {
+                        //check if contrller is not null
+                        if (controller!.value.isInitialized) {
+                          //check if controller is initialized
+                          XFile? tmp;
+                          tmp = await controller!.takePicture(); //capture image
+                          print(tmp);
+                          setState(() {
+                            //update UI
+                            image = tmp;
+                          });
+                          // if (image != null) {
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) => ReportSightingPage(
+                          //             title: "Report Missing Child",
+                          //             image: image!)));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MatchResolver(
+                                        title: "TRACK",
+                                        address: "VidyaNagar, 482747",
+                                        aloneStatus: "yes",
+                                        contact: "",
+                                        image: image!,
+                                      )));
+                          // }
+                        }
+                      }
+                    } catch (e) {
+                      print(e); //show error
+                    }
                   },
                   child: Text("Upload", style: TextStyle(fontSize: 20))),
             ],
