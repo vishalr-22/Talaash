@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:talaash/screens/report_sighting.dart';
+import '../utils/pick_image.dart';
+import 'report_sighting.dart';
 
 class ScanPhotoPage extends StatefulWidget {
   const ScanPhotoPage({Key? key, required this.title}) : super(key: key);
@@ -31,7 +35,7 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
         setState(() {});
       });
     } else {
-      print("NO any camera found");
+      print("camera NOT found");
     }
   }
 
@@ -71,7 +75,42 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
                           : CameraPreview(controller!)),
               ElevatedButton(
                   onPressed: () async {
-                    print('Take photo');
+                    try {
+                      if (controller != null) {
+                        //check if contrller is not null
+                        if (controller!.value.isInitialized) {
+                          //check if controller is initialized
+                          XFile? tmp;
+                          tmp = await controller!.takePicture(); //capture image
+                          print(tmp);
+                          setState(() {
+                            //update UI
+                            image = tmp;
+                          });
+                          if (image != null) {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ReportSightingPage(
+                                        title: "Report Missing Child",
+                                        image: image!)));
+                          }
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) => MatchResolver(
+                          //               title: "TRACK",
+                          //               address: "VidyaNagar, 482747",
+                          //               aloneStatus: "yes",
+                          //               contact: "",
+                          //               image: image!,
+                          //             )));
+                          // }
+                        }
+                      }
+                    } catch (e) {
+                      print(e); //show error
+                    }
                   },
                   child: Text("Take Photo", style: TextStyle(fontSize: 20))),
               Text(
@@ -80,7 +119,7 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
               ),
               ElevatedButton(
                   onPressed: () async {
-                    print('Upload Photo');
+                    print('Upload image');
                   },
                   child: Text("Upload", style: TextStyle(fontSize: 20))),
             ],
