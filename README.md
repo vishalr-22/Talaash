@@ -32,7 +32,6 @@ The objective of this project is to help Central authorities & Police to track d
 ## Source of facts : 
 1. https://www.cry.org/wp-content/uploads/2018/08/International-Missing-Children_s-Day-2018.pdf.
 2. https://www.icmec.org/press/activities-in-more-than-22-countries-around-the-globe-will-remember-missing-children-on-may-25/.
-3. 
 
 
 ## Developed by Team Cryptasylum
