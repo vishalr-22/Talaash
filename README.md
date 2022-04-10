@@ -1,6 +1,9 @@
 # Talaash - In Search of the Missing...
 ### __A facial recognition system for tracking missing children.__
 
+### Project has two Apps linked to each other:
+1. Talaash Mobile App(Flutter) : For Users to Report sighting of missing children.
+2. Talaash Web App(Flask) : For Admin of Talaash from Concerned Authority who can see alerts when sightings are reported by people in Talaash Mobile App.
 ## Google Maps used in our App for Sighting Location of missing child:
 
 
@@ -33,6 +36,8 @@ The objective of this project is to help Central authorities & Police track down
 * By Using Machine learning & AI, build a Missing Children Tracking system on the go to assist Central authorities(Gov, NGOs etc).
 * Here we will have a database of Missing people, and whenever someone try to ping any photo against it, an algorithm hits off thats start matching those photographs with available database using our Face Recognition Mode .
 * It will be an open-source product and free-to-use application that communities can use to help finding people and children in their neighbourhood.
+
+
 
 ## 5. Tech Stack:
 * [Flutter](https://flutter.dev/) : For Android App on the User Side
