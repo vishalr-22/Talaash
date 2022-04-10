@@ -1,6 +1,12 @@
 # Talaash - In Search of the Missing...
 ### __A facial recognition system for tracking missing children.__
 
+## Google Maps used in our App for Sighting Location of missing child:
+
+
+https://user-images.githubusercontent.com/59617133/162607933-dd01d46b-0bc1-4201-9702-856293661a45.mp4
+
+
 ## 1. Problem Statement:
 
 ### -> Status of Missing Children Globally and in India: An Overview
