@@ -5,6 +5,7 @@
 ### Project has two Apps linked to each other:
 1. **User Mobile App(Flutter)** : For Users to Report sighting of missing children.
 2. **Admin Web App(Flask)** : For Admin of Talaash from Concerned Authority who can see alerts when sightings are reported by people in Talaash Mobile App.
+
 ## Google Maps used in our App for Sighting Location of missing child:
 
 
@@ -51,6 +52,10 @@ The objective of this project is to help Central authorities & Police track down
 1. https://www.cry.org/wp-content/uploads/2018/08/International-Missing-Children_s-Day-2018.pdf.
 2. https://www.icmec.org/press/activities-in-more-than-22-countries-around-the-globe-will-remember-missing-children-on-may-25/.
 
+### Github Branches:
+1. Main : This is the main branch which has the Flutter Mobile App Data pushed to it.
+2. talaash_user : This branch has specifically changes pushed to it wrt the Mobile App.
+3. talaash_admin : This branch has all the Flask Web App data pushed to it.
 
 ## Developed by Team Cryptasylum
 - Shrikant Sahu
