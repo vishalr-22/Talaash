@@ -33,6 +33,7 @@ The objective of this project is to help Central authorities & Police track down
 * [Flask](https://flask.palletsprojects.com/en/2.1.x/) : For Web App on the admin side
 * [DeepFace](https://pypi.org/project/deepface/) : For Making our Face Recognition Model
 * [Firebase](https://firebase.google.com/?gclsrc=aw.ds)  : For Database
+* [Google Maps API](https://developers.google.com/maps)
 
 ## Source of facts : 
 1. https://www.cry.org/wp-content/uploads/2018/08/International-Missing-Children_s-Day-2018.pdf.
