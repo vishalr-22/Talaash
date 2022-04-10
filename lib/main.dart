@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 
 //screens
 import './screens/scan_photo.dart';
-import './screens/report_sighting.dart';
-import './screens/match_fail.dart';
-import './screens/match_success.dart';
-import './screens/child_details.dart';
-import './screens/choose_location.dart';
 
 Future<void> main() async {
   runApp(const MyApp());

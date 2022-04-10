@@ -13,7 +13,6 @@ class ChildDetailsPage extends StatefulWidget {
   // const ChildDetailsPage({Key? key, required this.title}) : super(key: key);
   const ChildDetailsPage(
       {Key? key,
-      required this.title,
       required this.image,
       required this.name,
       required this.age,
@@ -21,7 +20,6 @@ class ChildDetailsPage extends StatefulWidget {
       required this.missingDate,
       required this.missingFrom})
       : super(key: key);
-  final String title;
   final Uint8List image;
   final String name;
   final String age;
@@ -39,12 +37,21 @@ class _ChildDetailsPageState extends State<ChildDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Color(0xfffbb500),
-        title: Center(child: Text(widget.title)),
+        title: Center(
+          child: Text(
+            'Report Missing Child',
+            style: TextStyle(
+                fontSize: 24,
+                color: Colors.black54,
+                fontWeight: FontWeight.w800),
+          ),
+        ),
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
           height: double.infinity,
           width: double.infinity,
           color: Color(0xff353535),
@@ -55,13 +62,13 @@ class _ChildDetailsPageState extends State<ChildDetailsPage> {
                 "DETAILS",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 36,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
               Container(
                 child: CircleAvatar(
                   backgroundImage: Image.memory(widget.image).image,
-                  radius: 60,
+                  radius: 70,
                 ),
               ),
               Padding(
@@ -136,15 +143,15 @@ class CustomTile extends StatelessWidget {
         Text("$title: ",
             style: TextStyle(
                 color: Color(0xff6af100),
-                fontSize: 24.0,
+                fontSize: 22.0,
                 fontWeight: FontWeight.bold,
-                letterSpacing: 2)),
+                letterSpacing: 1)),
         Text("$value",
             style: TextStyle(
                 color: Colors.white,
-                fontSize: 24.0,
+                fontSize: 22.0,
                 fontWeight: FontWeight.bold,
-                letterSpacing: 2)),
+                letterSpacing: 1)),
       ],
     );
   }

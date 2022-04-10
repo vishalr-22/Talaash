@@ -118,7 +118,7 @@ class _ReportSightingPageState extends State<ReportSightingPage> {
                         )),
               ),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               Text(
                 "Q. Was he/she alone?",
@@ -228,7 +228,7 @@ class _ReportSightingPageState extends State<ReportSightingPage> {
                         String imageB64 = base64Encode(imageBytes);
                         Map data = {
                           'image': imageB64,
-                          'aloneStatus': _status.toString(),
+                          'aloneStatus': _status.toString().split('.').last,
                           'address': address,
                           'contact': contact,
                         };
@@ -261,7 +261,6 @@ class _ReportSightingPageState extends State<ReportSightingPage> {
                                 MaterialPageRoute(
                                     builder: (context) => MatchSuccessPage(
                                           image: widget.image,
-                                          title: "Match Result",
                                           matchedImageBytes: decodedBytes,
                                           name: name,
                                           gender: gender,
