@@ -1,9 +1,10 @@
 # Talaash - In Search of the Missing...
 ### __A facial recognition system for tracking missing children.__
 
+## Project Structure:
 ### Project has two Apps linked to each other:
-1. Talaash Mobile App(Flutter) : For Users to Report sighting of missing children.
-2. Talaash Web App(Flask) : For Admin of Talaash from Concerned Authority who can see alerts when sightings are reported by people in Talaash Mobile App.
+1. **User Mobile App(Flutter)** : For Users to Report sighting of missing children.
+2. **Admin Web App(Flask)** : For Admin of Talaash from Concerned Authority who can see alerts when sightings are reported by people in Talaash Mobile App.
 ## Google Maps used in our App for Sighting Location of missing child:
 
 
